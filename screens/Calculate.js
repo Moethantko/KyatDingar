@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import { StyleSheet, View, Text, TextInput, Button, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import Header from '../components/Header';
-import Currency from '../models/currency';
 import {Picker} from '@react-native-picker/picker';
 
 let DATA = [];

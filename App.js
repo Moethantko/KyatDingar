@@ -1,9 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Home from './screens/Home';
 import TabNavigator from './navigation/TabNavigator';
-import Header from './components/Header';
-import { render } from 'react-dom';
 import React from 'react';
 
 export default class App extends React.Component {
