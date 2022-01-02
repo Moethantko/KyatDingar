@@ -7,14 +7,14 @@ import Home from '../screens/Home';
 import Calculate from '../screens/Calculate';
 
 const TabNavigator = createBottomTabNavigator({
-    HomeScreen: Home,
-    CalculateScreen: Calculate
+    Home: Home,
+    Convert: Calculate
 }, {
     tabBarOptions: {
-        activeTintColor: 'black',
+        activeTintColor: '#5d8263',
         style: {
-            height: 30,
-            marginBottom: 12
+            height: 33,
+            marginBottom: 12,
         }
     }
 });

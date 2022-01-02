@@ -5,16 +5,16 @@ import Row from '../components/Row';
 import LatestStatus from '../components/LatestStatus';
 import Currency from "../models/currency";
 
-
 const renderRows = (itemData) => {
     return (
-        <Row name={itemData.item.name} abbrev={itemData.item.abbrev} rate={itemData.item.rate} />
+        <Row key={itemData.item.id} name={itemData.item.name} abbrev={itemData.item.abbrev} rate={itemData.item.rate} />
     );
 };
 
 let CURRENCIES = [];
 let lastUpdated = '';
 let bank = '';
+let counter = 0;
 
 class Home extends React.Component {
 
@@ -28,8 +28,6 @@ class Home extends React.Component {
 
     fetchData = async () => {
 
-        let counter = 0;
-        
         try {
             const currencyRates = await fetch('http://forex.cbm.gov.mm/api/latest');
             const {rates, timestamp, info} = await currencyRates.json();
@@ -43,6 +41,7 @@ class Home extends React.Component {
             for (const index in rates) {
                  CURRENCIES.push(new Currency(counter, currencies[index], index, rates[index]));
                  counter++;
+                 console.log(counter);
             }
 
             this.setState({
