@@ -14,10 +14,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#5d8263',
         paddingVertical: 20,
         paddingHorizontal: 10,
-        marginTop: 25
+        marginTop: 25,
     },
     headerTitle: {
-        color: 'gold'
+        color: 'gold',
+        fontSize: 16,
     }
 });
 
